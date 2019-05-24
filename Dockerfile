@@ -8,7 +8,9 @@ USER root
 #RUN apt install --assume-yes gcc make 
 #RUN sh ./configure
 #RUN make; make test; make install
+
 RUN apt update
-RUN apt install --assume-yes gcc python3 python3-pip; pip3 install pandas
+RUN apt install --assume-yes gcc python3 python3-pip
+RUN pip3 install pandas pymongo
 
 EXPOSE 8080 8082
